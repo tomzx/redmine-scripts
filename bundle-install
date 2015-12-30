@@ -1,0 +1,3 @@
+#!/bin/bash
+
+bundle install --without rmagick postgres test --path vendor/bundle

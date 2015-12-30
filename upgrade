@@ -1,0 +1,8 @@
+#!/bin/bash
+
+./script/server-stop
+./script/bundle-install
+RAILS_ENV=production bundle exec rake db:migrate
+bundle exec rake tmp:cache:clear
+bundle exec rake tmp:sessions:clear
+./script/server-start
